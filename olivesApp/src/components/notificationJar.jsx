@@ -20,11 +20,16 @@ export default class NotificationJar extends Component {
 
     removeButton(e) {
         let item = e.target;
-        item.parentNode.removeChild(item)
+        item.style.display = 'none'
     }
 
     onSubmit(e) {
+        console.log('clicke');
         e.preventDefault();
+        // if(document.getElementById('messageButton').style.display==='none'){
+        //     document.getElementById('messageButton').style.display='show'
+        //  }
+        
         let jarInput = {
             color: this.state.color,
             quality: this.state.quality,
